@@ -3,7 +3,7 @@
     <form action="{{ route('reservas.store') }}" method="post">
         @csrf
         <div class="row">
-            
+            <input type="hidden" name="user_id" value="{{ auth()->id() }}">
             <div class="col-md-6 mb-3">
                 <label for="nome_reserva" class="form-label text-black">Nome da Reserva:</label>
                 <input type="text"
